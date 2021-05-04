@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>View Screens</title>
+
+</head>
+<body>
+<div class="screens" th:each="screen : ${viewscreens}">
+  <div class="screen" th:object="${screen}">
+    <h2 th:text="*{name}"></h2>
+    <dl>
+      <dt>Role</dt>
+      <dd th:text="*{role}"></dd>
+
+      <dt>Location</dt>
+      <dd th:text="*{location}"></dd>
+    </dl>
+  </div>
+</div>
+</body>
+</html>
